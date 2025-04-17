@@ -158,7 +158,7 @@ export class CarController {
    */
   adjustCarScale(): void {
     if (!this.car) return;
-    
+
     const texture = this.scene.textures.get(ASSET_KEYS.CAR.CAR1);
     const frame = texture.get();
 
@@ -186,5 +186,32 @@ export class CarController {
     if (cursors.space?.isDown) {
       this.speed = CAR_CONFIG.SPEED;
     }
+  }
+
+  /**
+   * Increase car speed
+   */
+  increaseSpeed(): void {
+    this.speed = Math.min(this.speed + CAR_CONFIG.SPEED_INCREMENT, CAR_CONFIG.MAX_SPEED);
+    if (DEBUG_CONFIG.ENABLED) {
+      console.log(`Car speed increased to: ${this.speed}`);
+    }
+  }
+
+  /**
+   * Decrease car speed
+   */
+  decreaseSpeed(): void {
+    this.speed = Math.max(this.speed - CAR_CONFIG.SPEED_INCREMENT, CAR_CONFIG.MIN_SPEED);
+    if (DEBUG_CONFIG.ENABLED) {
+      console.log(`Car speed decreased to: ${this.speed}`);
+    }
+  }
+
+  /**
+   * Get current car speed
+   */
+  getSpeed(): number {
+    return this.speed;
   }
 }

@@ -15,6 +15,9 @@ export const TRACK_CONFIG = {
 // Car configuration
 export const CAR_CONFIG = {
   SPEED: 150,
+  MIN_SPEED: 50,
+  MAX_SPEED: 300,
+  SPEED_INCREMENT: 10,
   TURN_SPEED: 2,
   FALLBACK_SCALE: 0.07,
   ANGULAR_DRAG: 200,
@@ -73,6 +76,47 @@ export const ASSET_KEYS = {
   },
 };
 
+// UI configuration
+export const UI_CONFIG = {
+  SPEED_CONTROL: {
+    BUTTON_WIDTH: 40,
+    BUTTON_HEIGHT: 40,
+    PADDING: 10,
+    BACKGROUND_COLOR: 0x333333,
+    BACKGROUND_ALPHA: 0.8,
+    BORDER_COLOR: 0xffffff,
+    BORDER_ALPHA: 0.5,
+    BORDER_WIDTH: 1,
+    FONT_FAMILY: 'Arial',
+    FONT_SIZE: '24px',
+    TEXT_COLOR: '#ffffff',
+    INCREASE_BUTTON_X: 220,
+    INCREASE_BUTTON_Y: 10,
+    DECREASE_BUTTON_X: 170,
+    DECREASE_BUTTON_Y: 10
+  },
+  CAR_INFO_PANEL: {
+    X: 0,
+    Y: 0,
+    WIDTH: 160,
+    HEIGHT: 130,
+    PADDING: 8,
+    CORNER_RADIUS: 0,
+    BACKGROUND_COLOR: 0x000000,
+    BACKGROUND_ALPHA: 0.8,
+    BORDER_COLOR: 0xffffff,
+    BORDER_ALPHA: 0.5,
+    BORDER_WIDTH: 1,
+    FONT_FAMILY: 'Arial',
+    TITLE_FONT_SIZE: '14px',
+    TITLE_COLOR: '#ffffff',
+    INFO_FONT_SIZE: '12px',
+    INFO_COLOR: '#ffffff',
+    LINE_HEIGHT: 14,
+    LINE_SPACING: 2
+  }
+};
+
 // Asset paths
 export const ASSET_PATHS = {
   CAR: {
@@ -83,9 +127,9 @@ export const ASSET_PATHS = {
     CAR5: 'assets/Car_1_Main_Positions/Car_1_05.png',
   },
   ROAD: {
-    STRAIGHT: 'assets/Road_01/Road_01_Tile_01/Road_01_Tile_01.png',
+    STRAIGHT: 'assets/Road_01/Road_01_Tile_01/Road_01_Tile_03.png',
     CURVE: 'assets/Road_01/Road_01_Tile_02/Road_01_Tile_02.png',
-    INTERSECTION: 'assets/Road_01/Road_01_Tile_03/Road_01_Tile_03.png',
+    INTERSECTION: 'assets/Road_01/Road_01_Tile_03/Road_01_Tile_01.png',
     T_JUNCTION: 'assets/Road_01/Road_01_Tile_04/Road_01_Tile_04.png',
     END: 'assets/Road_01/Road_01_Tile_05/Road_01_Tile_05.png',
     CORNER: 'assets/Road_01/Road_01_Tile_06/Road_01_Tile_06.png',
